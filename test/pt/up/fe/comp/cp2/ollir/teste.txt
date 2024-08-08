@@ -1,0 +1,44 @@
+import A;
+
+B {
+
+    .method foo().i32 {
+
+        ret.i32 1.i32;
+
+    }
+
+    .method bar().i32 {
+
+        b.B :=.B new(B).B;
+        invokespecial(b.B, "<init>").V;
+
+        c.bool :=.bool invokevirtual(a.A, "foo").bool;
+
+        ret.i32 0.i32;
+
+    }
+
+    .construct B().V {
+        invokespecial(this, "<init>").V;
+    }
+}
+
+
+import A;
+
+class B {
+
+    int foo(){
+    return 1;
+    }
+
+    int bar(){
+     B b;
+     A a;
+     boolean c;
+     b = new B();
+     c = a.foo();
+     return 0;
+    }
+}
